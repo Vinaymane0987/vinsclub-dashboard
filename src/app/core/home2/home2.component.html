@@ -1,0 +1,78 @@
+<div class="w-full h-full box-border px-5">
+  <div class="grid grid-cols-2 gap-4 pb-3">
+    <div class="w-full">
+      <div
+        class="p-4 relative bg-white border border-gray-100 shadow-lg rounded-2xl"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-14 w-14 absolute bottom-4 right-3 text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+          <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+        </svg>
+        <div class="flex justify-between items-center">
+          <img
+            class="w-7 filter grayscale"
+            src="https://v1.tailwindcss.com/_next/static/media/tailwindcss-mark.6ea76c3b72656960a6ae5ad8b85928d0.svg"
+            alt="taiwind css"
+          />
+        </div>
+        <div class="text-2xl text-gray-500 font-medium leading-8 mt-5">10</div>
+        <div class="text-sm text-gray-500">Products</div>
+      </div>
+    </div>
+    <div class="w-full">
+      <div
+        class="p-4 relative bg-white border border-gray-100 shadow-lg rounded-2xl"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-14 w-14 absolute bottom-4 right-3 text-gray-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+          <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+        </svg>
+        <div class="flex justify-between items-center">
+          <img
+            class="w-7 filter grayscale"
+            src="https://v1.tailwindcss.com/_next/static/media/tailwindcss-mark.6ea76c3b72656960a6ae5ad8b85928d0.svg"
+            alt="taiwind css"
+          />
+        </div>
+        <div class="text-2xl text-gray-500 font-medium leading-8 mt-5">10</div>
+        <div class="text-sm text-gray-500">Users</div>
+      </div>
+    </div>
+  </div>
+  <div class="flex gap-4 h-96 items-center justify-center">
+    <div class="flex-1 rounded-lg border bg-white border-gray-400 shadow-lg">
+      <canvas
+        baseChart
+        [type]="chartType()"
+        [datasets]="chartData()"
+        [labels]="chartLabels()"
+        [options]="chartOptions()"
+        [legend]="ChartLegend()"
+        [plugins]="chartPlugin()"
+      >
+      </canvas>
+    </div>
+    <div class="flex-1 rounded-lg border bg-white border-gray-400 shadow-lg">
+      <canvas
+        baseChart
+        [type]="chartType()"
+        [datasets]="chartData()"
+        [labels]="chartLabels()"
+        [options]="chartOptions()"
+        [legend]="ChartLegend()"
+        [plugins]="chartPlugin()"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

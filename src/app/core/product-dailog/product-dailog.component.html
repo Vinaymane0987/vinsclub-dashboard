@@ -1,0 +1,50 @@
+<p-dialog [modal]="true" [(visible)]="display" class="w-full" closeIcon="false">
+  <ng-template pTemplate="header">
+    <div class="custom-dialog-header" class="px-10 pt-5">
+      <h3 class="font-medium text-2xl text-gray-600">{{ header }}</h3>
+    </div>
+  </ng-template>
+
+  <div class="w-[30rem] px-10 py-5">
+    <div class="flex align-items-center gap-3 pb-3">
+      <label class="price-label">Title:</label>
+      <input
+        type="text"
+        [(ngModel)]="product.title"
+        class="outline-none border-b border-b-gray-300 w-full"
+      />
+    </div>
+
+    <div class="flex align-items-center gap-3 py-3">
+      <label class="price-label">Body:</label>
+      <input
+        type="text"
+        [(ngModel)]="product.description"
+        class="outline-none border-b border-b-gray-300 w-full"
+      />
+    </div>
+
+    <div class="flex align-items-center gap-3 py-3">
+      <label class="price-label text-nowrap">Image URL:</label>
+      <input
+        type="text"
+        [(ngModel)]="product.imageUrl"
+        class="outline-none border-b border-b-gray-300 w-full"
+      />
+    </div>
+
+    <div class="flex align-items-center gap-3 py-3">
+      <label class="price-label text-nowrap">Price:</label>
+      <input
+        type="number"
+        [(ngModel)]="product.price"
+        class="outline-none border-b border-b-gray-300 w-full"
+      />
+    </div>
+
+    <div class="flex justify-content-end gap-2 py-3">
+      <p-button label="Cancel" severity="secondary" (click)="onCancel()" />
+      <p-button label="Confirm" (click)="onConfirm()" />
+    </div>
+  </div>
+</p-dialog>

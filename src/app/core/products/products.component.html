@@ -1,0 +1,24 @@
+<div class="w-full box-border">
+  <app-topbar (inputValue)="onSearchTermChange($event)"></app-topbar>
+  <div class="px-5">
+    <app-product
+      [products]="filteredProducts()"
+      (toggleDialog)="toggleAddPopup($event)"
+      (edit)="toggleEditPopup($event)"
+      (delete)="deleteProduct($event)"
+    ></app-product>
+    <app-product-dailog
+      [display]="displayAddPopup()"
+      (confirm)="onConfirmAdd($event)"
+      header="Add Post"
+    >
+    </app-product-dailog>
+    <app-product-dailog
+      [display]="displayEditPopup()"
+      (confirm)="onconfirmEdit($event)"
+      header="Edit Post"
+      [product]="selectedProduct()"
+    >
+    </app-product-dailog>
+  </div>
+</div>

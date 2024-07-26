@@ -1,0 +1,54 @@
+<div class="w-full h-screen box-border">
+  <div class="flex h-full">
+    <div class="flex-[0.4] h-full">
+      <img
+        class="w-full h-full align-middle"
+        src="https://images.pexels.com/photos/3584998/pexels-photo-3584998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      />
+    </div>
+    <div class="w-full h-full flex-[0.6]">
+      <div class="p-32 h-full">
+        <h1 class="text-4xl font-bold text-gray-600">Login</h1>
+        <form [formGroup]="loginForm" class="w-full pt-6" (submit)="onSubmit()">
+          <div class="w-full box-border border-b border-b-gray-300 p-3 mb-6">
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              placeholder="Enter your email"
+              class="outline-none bg-none border-none h-full w-full"
+              required
+            />
+          </div>
+          <div class="w-full box-border border-b border-b-gray-300 p-3 mb-6">
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              placeholder="Enter your password"
+              class="outline-none bg-none border-none h-full w-full"
+              required
+            />
+          </div>
+          <button
+            class="text-gray-700 mb-6 px-6 py-2 bg-gray-100 rounded-md"
+            type="submit"
+            [disabled]="loginForm.invalid"
+          >
+            Login
+          </button>
+        </form>
+        <div class="flex items-center justify-center">
+          <p>
+            New User
+            <a
+              routerLink="/sign-up"
+              class="text-blue-300 cursor-pointer font-medium pl-2"
+              >SignUp</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

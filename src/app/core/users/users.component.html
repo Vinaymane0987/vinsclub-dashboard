@@ -1,0 +1,6 @@
+<div class="w-full box-border">
+  <app-topbar (inputValue)="onSearchTermChange($event)"></app-topbar>
+  <div class="px-5">
+    <app-user [users]="filteredUsers()"></app-user>
+  </div>
+</div>
